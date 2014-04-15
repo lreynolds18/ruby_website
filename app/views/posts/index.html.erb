@@ -1,0 +1,15 @@
+<h1>All Posts</h1>
+
+<table>
+  <tr>
+    <th>Link</th>
+    <th>Title</th>
+  </tr>
+
+  <% @post.each do |post| %>
+    <tr>
+       <td><%= link_to "Post " + post.id.to_s, post_path(post) %></td>
+       <td><%= post.title %></td>
+    </tr>
+  <% end %>
+</table>
